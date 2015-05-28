@@ -1,0 +1,59 @@
+body, input, textarea, select, button 
+	BaseFont: sizes.font 1.2
+
+html 
+	height: 100%
+
+body 
+	height: 100%
+	text-rendering:              optimizelegibility
+	font-smoothing:              antialiased
+	-webkit-font-smoothing:      subpixel-antialiased !important
+	-webkit-backface-visibility: hidden
+	-moz-font-smoothing:         antialiased
+	-moz-backface-visibility:    hidden
+	-moz-osx-font-smoothing:     grayscale
+	-ms-backface-visibility:     hidden
+
+body *
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+input, textarea, select, button
+	BaseFont: 1em
+
+button::-moz-focus-inner 
+	padding: 0 
+	border: none
+
+input, 
+input:focus, 
+input[type="submit"]:hover, 
+input[type="button"]:hover, 
+button, button:hover, 
+a, a:hover
+	transition .3s
+
+
+.cleaner
+	display: block
+	clear: both
+	height: 0
+	overflow: hidden
+	font-size: 0
+	line-height: 0
+
+.cleared:after 
+	display: block
+	content: "."
+	height: 0
+	clear: both
+	overflow: hidden
+	visibility: hidden
+
+.hidden 
+	display: none !important
+
+.non-selective 
+	user-select: none 
+	user-drag: none
+

@@ -1,0 +1,29 @@
+{
+  "name": "stylus-boilerplate",
+  "version": "0.0.0",
+  "description": "Stylus boilerplate",
+  "main": "build.sh",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stcherenkov/stylus-boilerplate.git"
+  },
+  "keywords": [
+    "stylus",
+    "stylus",
+    "framework"
+  ],
+  "author": "Stanislav Cherenkov <dev@stanislavcherenkov.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stcherenkov/stylus-boilerplate/issues"
+  },
+  "homepage": "https://github.com/stcherenkov/stylus-boilerplate",
+  "private": true,
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-stylus": "^2.0.2"
+  }
+}

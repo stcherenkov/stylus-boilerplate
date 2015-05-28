@@ -1,0 +1,9 @@
+_isMetric(value)
+    value is a 'unit'
+
+
+_extend(default, args...)
+    for arg in args
+        for name, value in arg
+            default[name] = value
+    default

@@ -1,0 +1,103 @@
+// Transition
+// Usage: 
+// transition(.3s);
+
+transition() 
+	-webkit-transition arguments
+	transition arguments
+
+
+// Filter for webkit & html5
+// Usage: 
+// filter(brightness(140%));
+
+filter() 
+	-webkit-filter arguments
+	filter arguments
+
+
+// Cross-browser opacity
+// Usage: 
+// opacity(0.8);
+
+opacity(o)
+	filter unquote('alpha(opacity=' + round(o * 100) + ')') //IE5-7
+	-ms-filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(o * 100) + ')') //IE8
+	opacity o
+
+
+// Sprite in background
+// Usage: 
+// graphics(-100px, 0);
+
+graphics(x, y) 
+	background transparent url(../i/graphics.png) no-repeat x y
+
+
+// Cross-browser placeholder
+// Usage: 
+// placeholder {
+// 	rule: value;
+// }
+
+placeholder() 
+	&::-webkit-input-placeholder 
+		{block}
+	&:-moz-placeholder 
+		{block}
+	&::-moz-placeholder 
+		{block}
+	&:-ms-input-placeholder 
+		{block}
+
+
+// Cross-browser selected text decoration
+// Usage:
+// selected {
+// 		rule value	
+// }
+
+selected() 
+	&::-moz-selection 
+		{block}
+	&::selection 
+		{block}
+
+
+overflow()
+	if arguments == 'ellipsis'
+		overflow hidden
+		white-space nowrap
+		text-overflow ellipsis
+	else
+		overflow arguments
+
+
+display()
+	if arguments == 'inline-column'
+		display inline-block
+		vertical-align top
+	else
+		display arguments
+
+
+absolute-padding($top = 0, $right = false, $bottom = false, $left = false)
+	position absolute
+	top $top
+	if $left
+		left $left
+		bottom $bottom
+		right $right
+	else
+		if $bottom
+			left $right
+			bottom $bottom
+			right $right
+		else
+			bottom $top
+			if $right
+				right $right
+				left $right
+			else
+				right $top
+				left $top
